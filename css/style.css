@@ -119,3 +119,26 @@
     background-color: transparent;
     z-index: 1;
 }
+.third-image {
+    width: 97.5%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 90px;
+    margin-left: 25px;
+}
+.text-third-image {
+    width: 834px;
+    background-color: transparent;
+    position: absolute;
+    padding-top: 1054px;
+    padding-left: 156px;
+}
+.text-third-image h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 70px;
+    color: #ffffff;
+    background-color: transparent;
+    z-index: 1;
+}
