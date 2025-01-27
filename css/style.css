@@ -102,3 +102,20 @@
     top: 1594px;
     margin-left: 50px;
 }
+.text-second-image {
+    width: 834px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 1204px;
+    padding-left: 156px;
+    background-color: transparent;
+}
+.text-second-image h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 70px;
+    color: #ffffff;
+    background-color: transparent;
+    z-index: 1;
+}
