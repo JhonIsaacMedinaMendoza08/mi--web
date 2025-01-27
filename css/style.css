@@ -142,3 +142,204 @@
     background-color: transparent;
     z-index: 1;
 }
+.four-image {
+    width: 97.5%;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 30px;
+    margin-left: 25px;
+}
+.text-four-image {
+    width: 834px;
+    background-color: transparent;
+    position: absolute;
+    padding-top: 1004px;
+    padding-left: 156px;
+}
+.text-four-image h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 70px;
+    color: #ffffff;
+    background-color: transparent;
+    z-index: 1;
+}
+.text-latest-blog{
+    padding-top: 54px;
+    padding-left: 156px;
+}
+.text-latest-blog h1 {
+    font-family: "Montserrat-Medium";
+    font-size: 65px;
+    color: #ffffff;
+}
+
+.blog-container {
+    display: flex; /* Activa Flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinea verticalmente al inicio */
+    gap: 20px; /* Espaciado entre los blogs (ajusta según necesites) */
+}
+
+.blog1, .blog2, .blog3, .blog4 {
+    width: 22%; /* Ajusta el ancho para que ambos quepan lado a lado */
+    background-color: #145E2A; /* Opcional: estilo para visualizar los bloques */
+    padding: 20px; /* Opcional: espacio interno */
+    box-shadow: 5px 5px 8px #000000; /* Sombra */
+    border-radius: 30px; /* Opcional: esquinas redondeadas */
+}
+
+.blog1 img {
+    width: 342px;
+    height: 232px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.blog1 h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 35px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.blog1 p {
+    font-family: "Montserrat-Regular";
+    font-size: 23px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: transparent;
+}
+.blog1 button {
+    width: 145px;
+    height: 45px;
+    background-color: #d9d9d9;
+    border: 0px;
+    border-style: solid;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: "Montserrat-Regular";
+    font-size: 22px;
+    color: #000000;
+    margin-left: 110px;
+}
+
+.blog2 img {
+    width: 342px;
+    height: 232px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.blog2 h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 35px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.blog2 p {
+    font-family: "Montserrat-Regular";
+    font-size: 23px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: transparent;
+}
+.blog2 button {
+    width: 145px;
+    height: 45px;
+    background-color: #d9d9d9;
+    border: 0px;
+    border-style: solid;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: "Montserrat-Regular";
+    font-size: 22px;
+    color: #000000;
+    margin-left: 110px;
+}
+.blog3 img {
+    width: 342px;
+    height: 232px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.blog3 h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 35px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.blog3 p {
+    font-family: "Montserrat-Regular";
+    font-size: 23px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: transparent;
+}
+.blog3 button {
+    width: 145px;
+    height: 45px;
+    background-color: #d9d9d9;
+    border: 0px;
+    border-style: solid;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: "Montserrat-Regular";
+    font-size: 22px;
+    color: #000000;
+    margin-left: 110px;
+}
+.blog4 img {
+    width: 342px;
+    height: 232px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.blog4 h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 35px;
+    background-color: transparent;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+.blog4 p {
+    font-family: "Montserrat-Regular";
+    font-size: 23px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: transparent;
+}
+.blog4 button {
+    width: 145px;
+    height: 45px;
+    background-color: #d9d9d9;
+    border: 0px;
+    border-style: solid;
+    border-radius: 24px;
+    cursor: pointer;
+    font-family: "Montserrat-Regular";
+    font-size: 22px;
+    color: #000000;
+    margin-left: 110px;
+}
