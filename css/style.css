@@ -1,475 +1,397 @@
-@import url(variable.css);
+@import url(variable.css); /* Importa las variables CSS definidas en el archivo variable.css */
 
-
-*{margin: 0; padding: 0; 
-    outline: 0px solid tomato;
-}
-*::before, *::after{box-sizing: border-box;}
-body{min-height: 100dvh;}
-input, button, textarea, select{font: inherit;}
-p{text-wrap: pretty;}
-h1, h2, h3, h4, h5, h6{text-wrap: balance;}
-img, video, svg{height: auto; max-width: 100%;}
-@media (prefers-reduced-motion: reduce){
-*, *::before, *::after{
-animation-duration: 0.01ms !important;
-animation-iteration-count: 1 !important;
-max-width: 100%;
-transition-duration: 0.01ms !important;
-scroll-behavior: auto !important;
-transition: none;
-}
+/* Reseteo general de estilos */
+* {
+  margin: 0; /* Elimina los márgenes predeterminados */
+  padding: 0; /* Elimina los rellenos predeterminados */
+  box-sizing: border-box; /* Incluye bordes y relleno en el ancho/alto total */
 }
 
-body{
-    background-color:rgba(7, 25, 23, 1);
-    height: auto;
+body {
+  background-color: rgba(7, 25, 23, 1); /* Color de fondo oscuro */
+  font-family: "Montserrat"; /* Define la fuente principal */
+  overflow-x: hidden; /* Oculta cualquier desplazamiento horizontal */
 }
-header {
-    position: relative;
-    margin: 0 auto;
-    width: 1440px;
-    height: 64px;
-    z-index: 1;
+/* Estilo del encabezado */
+.header-content {
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 1440px; /* Limita el ancho máximo a 1440px */
+    height: 64px; /* Altura del encabezado */
+    display: flex; /* Usa flexbox para distribuir los elementos */
+    justify-content: space-between; /* Espacio entre elementos principales */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 15px; /* Espaciado interno en los lados */
+    z-index: 1; /* Eleva el encabezado sobre otros elementos */  
 }
+
 .small-image {
-    background-color: transparent;
-    position: absolute;
-    top: 5px;
-    left: 5px;
+  background-color: transparent; /* Fondo transparente */
+  width: 40px; /* Ancho fijo para la imagen pequeña */
+  height: 40px; /* Altura fija para la imagen pequeña */
+  margin-top: 5px;
+  margin-left:40px;
 }
+
+/* Estilo para los botones superiores */
+.top-buttons {
+  display: flex; /* Usa flexbox para alinear los botones */
+  gap: 66px; /* Espacio entre cada botón */
+  padding-right: 50px;
+  color: #ffffff;
+}
+
 .top-buttons a {
-    font-family: "Montserrat-SemiBold";
-    font-size: 17px;
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    z-index: +1;
-    cursor: pointer;
+  list-style: none;
+  font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
+  font-size: 1rem; /* Tamaño de fuente relativo */
+  background-color: transparent; /* Fondo transparente */
+  color: #ffffff; /* Color blanco para el texto */
+  cursor: pointer; /* Cambia el puntero al pasar por encima */
 }
-.btn-work {
-    position: absolute;
-    top: 17px;
-    left: 1005px;
-}
-.btn-about {
-    position: absolute;
-    top: 17px;
-    left: 1119px;
-}
-.btn-blog {
-    position: absolute;
-    top: 17px;
-    left: 1240px;
-}
-.main{
-    position: relative;
-    width: 1440px;
-    height: 100svh;
-    margin: 0 auto;
+
+/* Estilo para la sección principal */
+.main {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    /*max-width: 1440px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra la sección horizontalmente */
+    text-align: center; /* Centra el contenido de texto */
 }
 
 .container {
-    position: absolute;
-    width: 1440px;
-    height: 1020px;
-    left: 50%;
-    transform: translateX(-50%);
-    top:0;
-    img{
-        width: 1440px;
-        height: 1024px;
-        z-index: -1;
-    }
+    /*max-width: 1440px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: flex; /* Usa flexbox para alinear elementos */
+    flex-direction: column; /* Organiza elementos en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+    gap: 24px; /* Espacio entre elementos */
+}
 
-    div{
-        position: absolute;
-        top: 328px;
-        left: 287px;
-        display: flex;
-        flex-direction: column;
-        gap: 17px;
-        color: white;
-        span {
-            font-family: "Montserrat-SemiBold";
-            font-size: 28px;
-        }
-        h1 {
-                font-family: "Montserrat-SemiBold";
-                font-size: 80px;
-                width: 726px;
-                height: auto;
-            }
-        p {
-            width: 325px;
-            height: auto;
-            font-family: "Montserrat-Medium";
-            font-size: 20px;
-            }
-    }
+.image-principal {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-image: linear-gradient(
+    to bottom, 
+    rgba(7, 25, 23, 0.2 ), /* Color transparente en la parte superior */
+    rgba(7, 25, 23, 0.5), /* Semitransparente en el medio 30%*/
+    rgba(7, 25, 23, 1)    /* oscuro en la parte inferior */
+  );
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    height: 100svh;
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+
 }
-.container::after {
-    content: "";
-    position: relative; /* Necesario para posicionar el pseudo-elemento sobre el contenedor */
-    top: 0;
-    
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to bottom, 
-        rgba(7, 25, 23, 0) 0%,   /* Transparente en la parte superior */
-        rgba(7, 25, 23, 0.3) 50%, /* Semitransparente en el medio */
-        rgba(7, 25, 23, 1) 100% /* Más oscuro en la parte inferior */
-    );
-    z-index:+1; /* Asegúrate de que esté encima del contenido del contenedor */
+
+.container-mainText{
+    width: 626px;
+    height: 360px;
+    position: relative;
+    left:-10svw;
+    top: 30svh;
+    display: flex; /* Usa flexbox para alinear los textos */
+    flex-direction: column; /* Organiza elementos en columna */
+    gap: 5px; /* Espacio entre los textos */
+    color: white; /* Color blanco para los textos */
 }
+.container-mainText span {
+    font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
+    font-size: 35px; /* Tamaño de fuente relativo */
+  }
+.container-mainText h1 {
+  font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
+  font-size: 80px; /* Tamaño de fuente relativo */
+}
+
+.container-mainText p {
+  width: 320px;
+  font-family: "Montserrat-Medium"; /* Fuente de peso medio */
+  font-size: 20px; /* Tamaño de fuente relativo */
+  /*max-width: 90%; /* Limita el ancho del párrafo */
+  /*margin: 0 auto; /* Centra el párrafo */
+}
+
+/* Contenedor de íconos */
 .icons-container {
-    width: 1005px;
-    height: 70px;
-    position: absolute;
-    top: 1064px;
-    left: 50%;
-    transform: translateX(-50%); 
+  width: 100%; /* Ocupa todo el ancho disponible */
+  display: flex; /* Usa flexbox para alinear íconos */
+  justify-content: center; /* Centra horizontalmente los íconos */
+  gap: 28px; /* Espacio entre íconos */
+  margin-top: 20px; /* Margen superior */
+  padding-top: 30svw;
 }
-.icons {
-    margin-right: 113px;
-}
-.second-image {
-    width: 1394px;
+/* Estilos para las imágenes principales */
+.second-image{
+    width: 96%;
     height: 848px;
-    position: absolute;
-    top: 1194px;
+    margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);
-    img{
-        width: 1394px;
-        height: 848px;
-    } 
-}
-.text-second-image {
-    width: 834px;
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
     position: absolute;
-    top: 1937px;
-    left: 266px;
-    transform: translateX(10%); 
+    top: 60svw;
+    z-index: -1;
 }
-.text-second-image h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 70px;
-    color: #ffffff;
-    background-color: transparent;
-    z-index: 1;
-}
-.third-image {
-    width: 1394px;
-    height: 848px;
+.text-second-image{
+    width: 634px; /* Ocupa todo el ancho */
+    height: 67px; /* Ocupa todo el alto */
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    img{
-        position: absolute;
-        top: 2000px;
-        width: 1394px;
-        height: 848px;
-    }  
+    top: 98svw ; /* Margen superior e inferior y centrado horizontal */
+    left: 5svw;
+    color: #ffffff; /* Color blanco */
 }
-.text-third-image {
-    width: 834px;
-    position: absolute;
-    top: 2759px;
-    left: 76px;
-    transform: translateX(10%); 
-}
-.text-third-image h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 70px;
-    color: #ffffff;
-    background-color: transparent;
-    z-index: 1;
-}
-.four-image {
-    width: 1394px;
-    height: 848px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    img{
-        position: absolute;
-        top: 2900px;
-        width: 1394px;
-        height: 848px;
-    } 
-}
-.text-four-image {
-    width: 834px;
-    position: absolute;
-    top: 3647px;
-    left: 76px;
-    transform: translateX(10%); 
-}
-.text-four-image h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 70px;
-    color: #ffffff;
-    background-color: transparent;
-    z-index: 1;
-}
-.text-latest-blog{
-    position: absolute;
-    top: 3820px;
-    left: 256px;
-}
-.text-latest-blog h2 {
-    font-family: "Montserrat-Medium";
-    font-size: 65px;
-    color: #ffffff;
+.text-second-image h2 {
+  font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
+  font-size: 60px; /* Tamaño de fuente relativo */
 }
 
+.third-image{
+    width: 98%;
+    height: 848px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 53svw;
+}
+.text-third-image{
+    width: 634px; /* Ocupa todo el ancho */
+    height: 67px; /* Ocupa todo el alto */
+    position: absolute;
+    top: 90svw ; /* Margen superior e inferior y centrado horizontal */
+    left: 5svw;
+    color: #ffffff; /* Color blanco */
+}
+.text-third-image h2 {
+    font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
+    font-size: 60px; /* Tamaño de fuente relativo */
+}
+.four-image{
+    width: 98%;
+    height: 848px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 76svw;
+}
+
+
+
+/* Estilo del contenedor de blogs */
 .blog-container {
-    width: 1440px;
-    position: absolute;
-    top: 3924px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex; 
-    flex-direction: row;
-    flex-shrink: 0;
-    justify-content: space-between; 
-    align-items: center; 
-    gap: 30px; 
-    overflow-x: scroll;
-    box-sizing: content-box; 
-
-}
-.blog {
-    width: 365px; 
-    height: 627px;
-    background-color: #145E2A; 
-    box-sizing: content-box; 
-    flex-shrink: 0;
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-    box-shadow: 5px 5px 8px #000000; 
-    border-radius: 30px;
-}
-
-.blog img {
-    width: 342px;
-    height: 232px;
-    border-radius: 30px;
-    background-color: transparent;
-    margin: 0 auto;
-
-}
-.blog h1 {
-    width: 330px;
-    font-family: "Montserrat-SemiBold";
-    font-size: 28px;
-    background-color: transparent;
-    margin-bottom: 24px;
-    margin: 0 auto;
-    color: #ffffff;
-}
-.blog p {
-    font-family: "Montserrat-Regular";
-    width: 330px;
-    font-size: 23px;
-    margin: 0 auto;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    color: #ffffff;
-    background-color: transparent;
-}
-.blog button {
-    width: 145px;
-    height: 45px;
-    background-color: #d9d9d9;
-    border: 0px;
-    border-style: solid;
-    border-radius: 24px;
-    cursor: pointer;
-    font-family: "Montserrat-Regular";
-    font-size: 22px;
-    color: #000000;
-    margin: 0 auto;
-}
-
-.blog-container::-webkit-scrollbar {
-    
-    height: 10px; /* Altura de la barra de desplazamiento */
-}
-
-.blog-container::-webkit-scrollbar-track {
-    background: #e5e5e500; /* Color del fondo de la barra */
-    border-radius: 4px; /* Bordes redondeados */
-}
-
-.blog-container::-webkit-scrollbar-thumb {
-    background: #2a5b3425; /* Color del deslizador */
-    border-radius: 4px; /* Bordes redondeados */
-}
-
-.blog-container::-webkit-scrollbar-thumb:hover {
-    background: radial-gradient(circle, rgb(50, 146, 76)0%,rgb(26, 71, 38)100%); /* Color del deslizador al pasar el mouse */
-}
-.redes {
-    width: 160px;
-    height: 29px;
-    position: absolute;
-    top: 2332px;
-    left: 50%;
-    transform: translateX(-50%); 
-}
-
-
-
-
-@media screen and (min-width: 1440px) {
-    
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-.text-second-image {
-    width: 834px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 100vh;
-    padding-top: 1204px;
-    padding-left: 156px;
-    background-color: transparent;
-}
-.text-second-image h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 70px;
-    color: #ffffff;
-    background-color: transparent;
-    z-index: 1;
-}
-
-.text-third-image {
-    width: 834px;
-    background-color: transparent;
-    position: absolute;
-    padding-top: 1054px;
-    padding-left: 156px;
-}
-.text-third-image h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 70px;
-    color: #ffffff;
-    background-color: transparent;
-    z-index: 1;
-}
-.four-image {
-    width: 97.5%;
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: 30px;
-    margin-left: 25px;
-}
-.text-four-image {
-    width: 834px;
-    background-color: transparent;
-    position: absolute;
-    padding-top: 1004px;
-    padding-left: 156px;
-}
-.text-four-image h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 70px;
-    color: #ffffff;
-    background-color: transparent;
-    z-index: 1;
-}
-.text-latest-blog{
-    padding-top: 54px;
-    padding-left: 156px;
-}
-.text-latest-blog h1 {
-    font-family: "Montserrat-Medium";
-    font-size: 65px;
-    color: #ffffff;
-}
-
-.blog-container {
-    margin-left: -150px;
-    margin-top: 20px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
-    gap: 15px; 
+  width: 100%; /* Ocupa todo el ancho disponible */
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Permite que los blogs se envuelvan en líneas */
+  gap: 20px; /* Espacio entre blogs */
+  justify-content: center; /* Centra los blogs */
+  margin: 40px auto; /* Margen superior e inferior */
 }
 
 .blog {
-    width: 22%; 
-    background-color: #145E2A; 
-    padding: 20px; 
-    box-shadow: 5px 5px 8px #000000; 
-    border-radius: 30px;
-    overflow: hidden;
-}/*
+  width: 90%; /* Ocupa el 90% del contenedor */
+  max-width: 360px; /* Ancho máximo de 360px */
+  background-color: #145e2a; /* Color de fondo */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  display: flex; /* Usa flexbox para organizar */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  box-shadow: 5px 5px 8px #000000; /* Sombra */
+}
 
 .blog img {
-    width: 342px;
-    height: 232px;
-    margin: 20px;
-    border-radius: 30px;
-    background-color: transparent;
+  width: 100%; /* Imagen ocupa todo el ancho del blog */
+  border-radius: 20px; /* Bordes redondeados */
+  height: auto; /* Ajusta la altura automáticamente */
 }
+
 .blog h1 {
-    font-family: "Montserrat-SemiBold";
-    font-size: 35px;
-    background-color: transparent;
-    margin-left: 20px;
-    margin-right: 20px;
-    color: #ffffff;
+  font-size: 1.2rem; /* Tamaño de fuente relativo */
+  text-align: center; /* Centra el texto */
+  margin: 10px 0; /* Margen superior e inferior */
+  color: white; /* Color blanco */
 }
+
 .blog p {
-    font-family: "Montserrat-Regular";
-    font-size: 23px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    background-color: transparent;
+  font-size: 1rem; /* Tamaño de fuente relativo */
+  text-align: center; /* Centra el texto */
+  color: white; /* Color blanco */
 }
+
 .blog button {
-    width: 145px;
-    height: 45px;
-    background-color: #d9d9d9;
-    border: 0px;
-    border-style: solid;
-    border-radius: 24px;
-    cursor: pointer;
-    font-family: "Montserrat-Regular";
-    font-size: 22px;
-    color: #000000;
-    margin-left: 110px;
+  width: 145px; /* Ancho fijo */
+  height: 45px; /* Altura fija */
+  background-color: #d9d9d9; /* Fondo gris */
+  border-radius: 24px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el puntero al pasar */
+  font-size: 1rem; /* Tamaño de fuente relativo */
+  color: #000000; /* Texto negro */
+}
+
+/* Ajustes para diferentes tamaños de pantalla */
+
+/* Para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap; /* Permite que los elementos del header se ajusten en varias líneas */
+    justify-content: center; /* Centra los elementos */
+    height: auto; /* Altura ajustable */
+  }
+
+  .blog {
+    max-width: 300px; /* Reduce el ancho máximo del blog */
+  }
+}
+
+/* Para pantallas de hasta 960px */
+@media (max-width: 960px) {
+    .header {
+        padding: 15px;
+        overflow: hidden;
+    }
+    .image-principal {
+        width: 430px;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .container-mainText {
+        width: 400px;
+        display: flex;
+        justify-content: normal;
+        padding-left: 15px;
+        padding-right: 15px;
+        /*height: 95svh;*/
+        position: absolute;
+        left: 20px;
+        overflow: hidden;
+    }
+
+    .container h1 {
+      font-size: 4rem; /* Reduce el tamaño del texto principal */
+    }
+    .container p {
+        width: 250px;
+        font-size: 1rem; /* Reduce el tamaño del texto principal */
+    }
+
+    .blog {
+    max-width: 280px; /* Reduce el ancho máximo del blog */
+    }
+
+    .icons-container {
+        justify-content: space-around;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        padding-top: 95svh;
+    }
+    .icons{
+        width: 45px;
+        height: 45px;
+    }
+    .icon{
+        width: 45px;
+        height: 45px;
+    }
+    .second-image{
+        width: 430px;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 120svh;
+    }
+    .text-second-image{
+      width: 234px; /* Ocupa todo el ancho */
+      height: 47px; /* Ocupa todo el alto */
+      position: absolute;
+      top: 225svh ; /* Margen superior e inferior y centrado horizontal */
+      left: 5svw;
+    }
+    .text-second-image h2 {
+      font-size: 1.5rem; /* Tamaño de fuente relativo */
+    }
+    .third-image{
+        width: 430px;
+        height: 800px;
+
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 120svh;
+    }
+    .text-third-image{
+      width: 234px; /* Ocupa todo el ancho */
+      height: 47px; /* Ocupa todo el alto */
+      position: absolute;
+      top: 215svh ; /* Margen superior e inferior y centrado horizontal */
+      left: 5svw;
+    }
+    .text-third-image h2 {
+      font-size: 1.5rem; /* Tamaño de fuente relativo */
+    }
+    .four-image{
+        width: 430px;
+        height: 800px;
+
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        top: 177svh;
+    }
+
+
+
+
+
+
+
+}
+
+/* Para pantallas de hasta 480px */
+/*@media (max-width: 576px) {
+    .header {
+        padding: 10px;
+    }
+  .top-buttons a {
+    font-size: 0.8rem; /* Reduce el tamaño del texto de los botones */
+ /* }
+  /*.container-mainText {
+    display: flex;
+    justify-content: normal;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 95svh;
+  }
+
+  .container-mainText h1 {
+
+    font-size: 2.5rem; /* Reduce el tamaño del texto principal */
+  /*}
+
+ /* .blog h1 {
+    font-size: 1rem; /* Reduce el tamaño del título del blog */
+  /*}
 }
