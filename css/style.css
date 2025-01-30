@@ -1,397 +1,415 @@
-@import url(variable.css); /* Importa las variables CSS definidas en el archivo variable.css */
-
-/* Reseteo general de estilos */
-* {
-  margin: 0; /* Elimina los márgenes predeterminados */
-  padding: 0; /* Elimina los rellenos predeterminados */
-  box-sizing: border-box; /* Incluye bordes y relleno en el ancho/alto total */
-}
-
-body {
-  background-color: rgba(7, 25, 23, 1); /* Color de fondo oscuro */
-  font-family: "Montserrat"; /* Define la fuente principal */
-  overflow-x: hidden; /* Oculta cualquier desplazamiento horizontal */
-}
-/* Estilo del encabezado */
-.header-content {
-    margin: 0 auto; /* Centra horizontalmente el contenedor */
-    width: 100%; /* Ocupa el 100% del ancho disponible */
-    max-width: 1440px; /* Limita el ancho máximo a 1440px */
-    height: 64px; /* Altura del encabezado */
-    display: flex; /* Usa flexbox para distribuir los elementos */
-    justify-content: space-between; /* Espacio entre elementos principales */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 15px; /* Espaciado interno en los lados */
-    z-index: 1; /* Eleva el encabezado sobre otros elementos */  
-}
-
-.small-image {
-  background-color: transparent; /* Fondo transparente */
-  width: 40px; /* Ancho fijo para la imagen pequeña */
-  height: 40px; /* Altura fija para la imagen pequeña */
-  margin-top: 5px;
-  margin-left:40px;
-}
-
-/* Estilo para los botones superiores */
-.top-buttons {
-  display: flex; /* Usa flexbox para alinear los botones */
-  gap: 66px; /* Espacio entre cada botón */
-  padding-right: 50px;
-  color: #ffffff;
-}
-
-.top-buttons a {
-  list-style: none;
-  font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
-  font-size: 1rem; /* Tamaño de fuente relativo */
-  background-color: transparent; /* Fondo transparente */
-  color: #ffffff; /* Color blanco para el texto */
-  cursor: pointer; /* Cambia el puntero al pasar por encima */
-}
-
-/* Estilo para la sección principal */
-.main {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    /*max-width: 1440px; /* Limita el ancho máximo */
-    margin: 0 auto; /* Centra la sección horizontalmente */
-    text-align: center; /* Centra el contenido de texto */
-}
-
-.container {
-    /*max-width: 1440px; /* Limita el ancho máximo */
-    margin: 0 auto; /* Centra horizontalmente */
-    display: flex; /* Usa flexbox para alinear elementos */
-    flex-direction: column; /* Organiza elementos en columna */
-    align-items: center; /* Centra horizontalmente los elementos */
-    gap: 24px; /* Espacio entre elementos */
-}
-
-.image-principal {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    background-image: linear-gradient(
-    to bottom, 
-    rgba(7, 25, 23, 0.2 ), /* Color transparente en la parte superior */
-    rgba(7, 25, 23, 0.5), /* Semitransparente en el medio 30%*/
-    rgba(7, 25, 23, 1)    /* oscuro en la parte inferior */
-  );
-    background-size: cover;
-    background-position: center 20%;
-    background-repeat: no-repeat;
-    height: 100svh;
+@import url('variables.css');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #071917;
+  }
+/********** header ******************/
+.header {
+    background: transparent; 
+    /* padding: 15px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: absolute;
-    top: 0px;
-    z-index: -1;
-
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+.div__logo img {
+    background: transparent; 
+    /* padding: 15px; */
 }
 
-.container-mainText{
+
+.div__menu {
+    background: transparent; 
+    /* padding: 15px; */
+}
+.ul__menu {
+    background: transparent; 
+    /* padding: 15px; */
+    display: flex;
+    gap: 100px;
+    padding-right: 100px;
+    color: var(--font-color-1);
+}
+.ul__menu li{
+    background: transparent; 
+    list-style: none;
+    font-family: "Montserrat-SemiBold";
+}
+.ul__menu li a{
+    background: transparent; 
+    color: var(--font-color-1);
+    text-decoration: none;
+}
+
+/********** main ******************/
+.main {
+    /* background: red; */
+    /* padding: 20px; */
+}
+.section__home {
+    background-image: linear-gradient(var(--color-gradient-1), var(--color-gradient-2) 100%), var(--banner-1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 135svh;
+    /*padding: 20px; */
+}
+.article__home {
+    background: transparent; 
+    /* padding: 20px; */
     width: 626px;
     height: 360px;
     position: relative;
-    left:-10svw;
-    top: 30svh;
-    display: flex; /* Usa flexbox para alinear los textos */
-    flex-direction: column; /* Organiza elementos en columna */
-    gap: 5px; /* Espacio entre los textos */
-    color: white; /* Color blanco para los textos */
+    left: 21svw;
+    top: 36svh;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--font-color-1);
+    
 }
-.container-mainText span {
-    font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
-    font-size: 35px; /* Tamaño de fuente relativo */
-  }
-.container-mainText h1 {
-  font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
-  font-size: 80px; /* Tamaño de fuente relativo */
+.article__home span{
+    background: transparent; 
+    font-size: 28px;
+    font-family: "Montserrat-SemiBold";
+}
+.article__home h1{
+    background: transparent; 
+    font-size: 75px;
+    font-family: "Montserrat-SemiBold";
+
+}
+.article__home p{
+    background: transparent; 
+    width: 320px;
+    font-family: "Montserrat-Medium";
+    font-size: 20px;
+}
+/************* section menu **********************/
+
+.section__icon{
+    background: #071917;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.container-mainText p {
-  width: 320px;
-  font-family: "Montserrat-Medium"; /* Fuente de peso medio */
-  font-size: 20px; /* Tamaño de fuente relativo */
-  /*max-width: 90%; /* Limita el ancho del párrafo */
-  /*margin: 0 auto; /* Centra el párrafo */
+.section__icon img{
+    /* background: violet; */
 }
-
-/* Contenedor de íconos */
-.icons-container {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  display: flex; /* Usa flexbox para alinear íconos */
-  justify-content: center; /* Centra horizontalmente los íconos */
-  gap: 28px; /* Espacio entre íconos */
-  margin-top: 20px; /* Margen superior */
-  padding-top: 30svw;
-}
-/* Estilos para las imágenes principales */
-.second-image{
-    width: 96%;
-    height: 848px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
+#my_about img{
     background-size: cover;
-    background-position: center 20%;
+    background-position: center;
     background-repeat: no-repeat;
+    height: 120svh;
+    margin: 0 auto;
     position: absolute;
-    top: 60svw;
-    z-index: -1;
+    top: 75svw;
 }
-.text-second-image{
-    width: 634px; /* Ocupa todo el ancho */
-    height: 67px; /* Ocupa todo el alto */
+#my_about h2 {
+  font-size: 40px;
+  font-family: "Montserrat-SemiBold";
+  color: var(--font-color-1);
+  position: absolute;
+  top: 130svw;
+  left: 5svw;
+}
+.third-image img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120svh;
+  margin: 0 auto;
+  position: absolute;
+  top: 140svw;
+}
+.third-image h2 {
+  background-color: transparent;
+  font-size: 40px;
+  font-family: "Montserrat-SemiBold";
+  color: var(--font-color-1);
+  z-index: +1;
+  position: absolute;
+  top: 195svw;
+  left: 5svw;
+}
+.four-image img{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 120svh;
+  margin: 0 auto;
+  position: absolute;
+  top: 205svw;
+}
+.four-image h2 {
+  background-color: transparent;
+  font-size: 40px;
+  font-family: "Montserrat-SemiBold";
+  color: var(--font-color-1);
+  z-index: +1;
+  position: absolute;
+  top: 260svw;
+  left: 5svw;
+}
+.latest-blog-area h1{
+    color: var(--font-color-1);
+    font-family: "Montserrat-Medium";
+    font-size: 45px;
     position: absolute;
-    top: 98svw ; /* Margen superior e inferior y centrado horizontal */
+    top: 266svw;
     left: 5svw;
-    color: #ffffff; /* Color blanco */
+    z-index: +1;
 }
-.text-second-image h2 {
-  font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
-  font-size: 60px; /* Tamaño de fuente relativo */
-}
-
-.third-image{
-    width: 98%;
-    height: 848px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    background-size: cover;
-    background-position: center 50%;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 53svw;
-}
-.text-third-image{
-    width: 634px; /* Ocupa todo el ancho */
-    height: 67px; /* Ocupa todo el alto */
-    position: absolute;
-    top: 90svw ; /* Margen superior e inferior y centrado horizontal */
-    left: 5svw;
-    color: #ffffff; /* Color blanco */
-}
-.text-third-image h2 {
-    font-family: "Montserrat-SemiBold"; /* Fuente semi-bold */
-    font-size: 60px; /* Tamaño de fuente relativo */
-}
-.four-image{
-    width: 98%;
-    height: 848px;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    background-size: cover;
-    background-position: center 50%;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 76svw;
-}
-
-
-
-/* Estilo del contenedor de blogs */
 .blog-container {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  display: flex; /* Usa flexbox */
-  flex-wrap: wrap; /* Permite que los blogs se envuelvan en líneas */
-  gap: 20px; /* Espacio entre blogs */
-  justify-content: center; /* Centra los blogs */
-  margin: 40px auto; /* Margen superior e inferior */
-}
-
-.blog {
-  width: 90%; /* Ocupa el 90% del contenedor */
-  max-width: 360px; /* Ancho máximo de 360px */
-  background-color: #145e2a; /* Color de fondo */
-  border-radius: 20px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  display: flex; /* Usa flexbox para organizar */
-  flex-direction: column; /* Coloca los elementos en columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  box-shadow: 5px 5px 8px #000000; /* Sombra */
-}
-
-.blog img {
-  width: 100%; /* Imagen ocupa todo el ancho del blog */
-  border-radius: 20px; /* Bordes redondeados */
-  height: auto; /* Ajusta la altura automáticamente */
-}
-
-.blog h1 {
-  font-size: 1.2rem; /* Tamaño de fuente relativo */
-  text-align: center; /* Centra el texto */
-  margin: 10px 0; /* Margen superior e inferior */
-  color: white; /* Color blanco */
-}
-
-.blog p {
-  font-size: 1rem; /* Tamaño de fuente relativo */
-  text-align: center; /* Centra el texto */
-  color: white; /* Color blanco */
-}
-
-.blog button {
-  width: 145px; /* Ancho fijo */
-  height: 45px; /* Altura fija */
-  background-color: #d9d9d9; /* Fondo gris */
-  border-radius: 24px; /* Bordes redondeados */
-  cursor: pointer; /* Cambia el puntero al pasar */
-  font-size: 1rem; /* Tamaño de fuente relativo */
-  color: #000000; /* Texto negro */
-}
-
-/* Ajustes para diferentes tamaños de pantalla */
-
-/* Para pantallas de hasta 1024px */
-@media (max-width: 1024px) {
-  header {
-    flex-wrap: wrap; /* Permite que los elementos del header se ajusten en varias líneas */
-    justify-content: center; /* Centra los elementos */
-    height: auto; /* Altura ajustable */
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    position: absolute;
+    top: 270svw;
+    overflow-x: auto; /* Habilita el scroll horizontal */
+    padding-bottom: 10px; 
   }
-
+  
   .blog {
-    max-width: 300px; /* Reduce el ancho máximo del blog */
+    flex: 0 0 auto; /* Evita que los elementos se reduzcan automáticamente */
+    width: 385px;
+    height: 627px;
+    background-color: #145e2a;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 5px 8px #000000;
   }
-}
+  
+  .blog img {
+    width: 100%;
+    border-radius: 20px;
+  }
+  
+  .blog h1 {
+    font-family: "Montserrat-SemiBold";
+    font-size: 28px;
+    margin: 10px 0;
+    color: white;
+    background: transparent;
 
-/* Para pantallas de hasta 960px */
+  }
+  
+  .blog p {
+    font-family: "Montserrat-Regular";
+    font-size: 20px;
+    background: transparent;
+    color: white;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  
+  .blog button {
+    width: 145px;
+    height: 45px;
+    background-color: #d9d9d9;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #000000;
+  }
+.info-redes{
+    position: absolute;
+    top: 310svw;
+    left: 50%;
+  }
+
+/************** version movil **********************/
 @media (max-width: 960px) {
-    .header {
+    .header{
+        /* background: red; */
         padding: 15px;
-        overflow: hidden;
     }
-    .image-principal {
-        width: 430px;
-        object-fit: cover;
+    .ul__menu{
+        gap: 15px;
+        padding-right: 15px;
+    }
+    .section__home{
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
+        width: 105%;
+        
+    }
+    .article__home{
+        left: 0;
+    }
+    .article__home span{
+        /* font-size: 1px; */
+    }
+    .article__home h1{
+        font-size: 70px;
+    }
+    .article__home p{
+
+    }
+    .section__icon{
         justify-content: space-around;
     }
-    .container-mainText {
-        width: 400px;
+    .section__icon img{
+        width: 45px;
+        height: 45px;
+        object-fit: contain;
+    }
+    #my_about img{
+      width: 105%;
+      height: 180svw;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-left: 2svw;
+      position: absolute;
+      top: 110svh;
+    }
+    #my_about h2 {
+      font-size: 30px;
+      font-family: "Montserrat-SemiBold";
+      background-color: transparent;
+      color: var(--font-color-1);
+      z-index: +1;
+      position: absolute;
+      top: 350svw;
+      left: 5svw;
+    }
+    .third-image img {
+      width: 97%;
+      height: 160svw;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 220svh;
+      }
+    .third-image h2 {
+      font-size: 30px;
+      font-family: "Montserrat-SemiBold";
+      background-color: transparent;
+      color: var(--font-color-1);
+      z-index: +1;
+      position: absolute;
+      top: 520svw;
+      left: 5svw;
+      }
+    .four-image img {
+      width: 97%;
+      height: 160svw;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 320svh;
+      }
+    .four-image h2 {
+        font-size: 30px;
+        font-family: "Montserrat-SemiBold";
+        background-color: transparent;
+        color: var(--font-color-1);
+        z-index: +1;
+        position: absolute;
+        top: 700svw;
+        left: 5svw;
+      }
+    .latest-blog-area h1{
+        font-size: 25px;
+        position: absolute;
+        top: 726svw;
+        left: 5svw;
+        z-index: +1;
+    }
+    .blog-container {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        overflow-x: auto; 
+        padding-bottom: 10px; 
+        position: absolute;
+        top: 735svw;
+        left: 5svw;
+      }
+    .info-redes{
+        position: absolute;
+        top: 890svw;
+        left: 30%;
+    }
+
+
+    }
+
+@media (max-width: 576px) {
+    .header{
+        /* background: blue; */
+        justify-content: normal;
+    }
+    .div__logo{
+        flex: 1;
+        /* background: red; */
+    }
+    .div__menu{
+        width: 100%;
+        /* background: violet; */
+    }
+    .ul__menu{
+        display: flex;
+        justify-content: center;
+    }
+    .article__home{
+        top: 25svh;
+    }
+    .article__home h1{
+        font-size: 60px;
+    }
+    .section__home{
         display: flex;
         justify-content: normal;
         padding-left: 15px;
         padding-right: 15px;
-        /*height: 95svh;*/
-        position: absolute;
-        left: 20px;
-        overflow: hidden;
+        height: 95svh;
     }
-
-    .container h1 {
-      font-size: 4rem; /* Reduce el tamaño del texto principal */
-    }
-    .container p {
-        width: 250px;
-        font-size: 1rem; /* Reduce el tamaño del texto principal */
-    }
-
-    .blog {
-    max-width: 280px; /* Reduce el ancho máximo del blog */
-    }
-
-    .icons-container {
-        justify-content: space-around;
-        padding: 5px;
-        display: flex;
-        flex-direction: row;
-        padding-top: 95svh;
-    }
-    .icons{
-        width: 45px;
-        height: 45px;
-    }
-    .icon{
-        width: 45px;
-        height: 45px;
-    }
-    .second-image{
-        width: 430px;
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        top: 120svh;
-    }
-    .text-second-image{
-      width: 234px; /* Ocupa todo el ancho */
-      height: 47px; /* Ocupa todo el alto */
+    #my_about img{
+      width: 103%;
+      height: 180svw;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
-      top: 225svh ; /* Margen superior e inferior y centrado horizontal */
-      left: 5svw;
+      top: 110svh;
     }
-    .text-second-image h2 {
-      font-size: 1.5rem; /* Tamaño de fuente relativo */
-    }
-    .third-image{
-        width: 430px;
-        height: 800px;
-
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        top: 120svh;
-    }
-    .text-third-image{
-      width: 234px; /* Ocupa todo el ancho */
-      height: 47px; /* Ocupa todo el alto */
+    .third-image img {
+      width: 103%;
+      height: 160svw;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       position: absolute;
-      top: 215svh ; /* Margen superior e inferior y centrado horizontal */
-      left: 5svw;
-    }
-    .text-third-image h2 {
-      font-size: 1.5rem; /* Tamaño de fuente relativo */
-    }
-    .four-image{
-        width: 430px;
-        height: 800px;
-
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        justify-content: space-around;
-        position: absolute;
-        top: 177svh;
-    }
-
-
-
-
-
-
-
-}
-
-/* Para pantallas de hasta 480px */
-/*@media (max-width: 576px) {
-    .header {
-        padding: 10px;
-    }
-  .top-buttons a {
-    font-size: 0.8rem; /* Reduce el tamaño del texto de los botones */
- /* }
-  /*.container-mainText {
-    display: flex;
-    justify-content: normal;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 95svh;
-  }
-
-  .container-mainText h1 {
-
-    font-size: 2.5rem; /* Reduce el tamaño del texto principal */
-  /*}
-
- /* .blog h1 {
-    font-size: 1rem; /* Reduce el tamaño del título del blog */
-  /*}
+      top: 220svh;
+      }
+    .four-image img {
+      width: 103%;
+      height: 160svw;
+      min-height: 300px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 320svh;
+      }
 }

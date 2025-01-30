@@ -1,107 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Web</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Simple website design</title>
 </head>
+
 <body>
-    <header>
-        <div class="header-content">
-            <img src="storage/img/small-image.png" alt="small-image" class="small-image">
-            <div class="top-buttons">
-                <a class="btn btn-work">Work</a>
-                <a class="btn btn-about">About</a>
-                <a class="btn btn-blog">Blog</a>
-            </div>
+    <!-- header -->
+    <header class="header">
+        <div class="div__logo">
+            <img src="storage/img/small-image.png" class="logo">
+        </div>
+        <div class="div__menu">
+            <ul class="ul__menu">
+                <li><a href="#_my_work">Work</a></li>
+                <li><a href="#my_about">About</a></li>
+                <li><a href="views/blog.html" target="_blank">Blog</a></li>
+            </ul>
         </div>
     </header>
-    <main>
-
-        <section class="container">
-            <img src="storage/img/image-principal.png" alt="image-principal" class="image-principal">
-            <div class="container-mainText">
+    <!-- main -->
+    <main class="main">
+        <section class="section__home">
+            <article class="article__home">
                 <span>Linus Kigai</span>
-                <h1>Bringing <br>Concept to Life</h1>
-                <p>
-                    Lörem ipsum ditijybel beras fassade. Prel munira. Transperson bere då heterovalens. Kiling intraktig. Plasm ång refunde krobåling. 
-                </p>
-            </div>
+                <h1>Bringing Concept to Life</h1>
+                <p>Lörem ipsum ditijybel beras fassade. Prel munira. Transperson bere då heterovalens. Kiling intraktig.
+                    Plasm ång refunde krobåling. </p>
+            </article>
         </section>
-        <section class="icons">
-            <div class="icons-container">
-                <img src="storage/img/icon-1.png" alt="Icon 1" class="icons">
-                <img src="storage/img/icon-2.png" alt="Icon 2" class="icons">
-                <img src="storage/img/icon-3.png" alt="Icon 3" class="icons">
-                <img src="storage/img/icon-4.png" alt="Icon 4" class="icons">
-                <img src="storage/img/icon-5.png" alt="Icon 5" class="icons">
-                <img src="storage/img/icon-6.png" alt="Icon 6" class="icon">
-            </div>
+        <section class="section__icon">
+            <img src="storage/img/icon-1.png">
+            <img src="storage/img/icon-2.png">
+            <img src="storage/img/icon-3.png">
+            <img src="storage/img/icon-4.png">
+            <img src="storage/img/icon-5.png">
+            <img src="storage/img/icon-6.png">
         </section>
-
-        <section class="secondary-image">
-            <img src="storage/img/second-image.png" alt="second-image" class="second-image">
-            <div class="text-second-image">
-                <h2>URBAN PLANNING</h2>
-            </div>
-        </section> 
-      
-
+        <section id="my_about">
+            <img src="storage/img/second-image.png">
+            <h2>URBAN PLANNING</h2>
+        </section>
         <section class="third-image">
-            <img src="storage/img/third-image.png" alt="third-image" class="third-image">
-            <div class="text-third-image">
-                <h2>GRAPHICS DESIGN</h2>
-            </div>
-        </section> 
-
+            <img src="storage/img/third-image.png">
+            <h2>GRAPHICS DESIGN</h2>
+        </section>
         <section class="four-image">
-            <img src="storage/img/four-image.png" alt="four-image" class="four-image">
-            <div class="text-four-image">
-                <h1></h1>
+            <img src="storage/img/four-image.png">
+            <h2>ART</h2>
+        </section>
+        <section class="latest-blog-area ">
+            <h1>Latest Blog</h1>
+        </section>
+        <section class="blog-container">
+            <div class="blog">
+                <img src="storage/img/image-blog1.png"  class="image-blog1">
+                <h1>Lörem ipsum patt kar i renyst</h1>
+                <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana,nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
+                <button>Read More</button>
             </div>
-        </section> 
-<!--
-        <section class="latest-blog-area">
-            <div class="text-latest-blog">
-                <h2>Latest Blog</h2>
+            <div class="blog">
+                <img src="storage/img/image-blog2.png">
+                <h1>Lörem ipsum patt kar i <br>renyst</h1>
+                <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana,nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
+                <button>Read More</button>
             </div>
-            <div class="blog-container">
-                <div class="blog">
-                    <img src="storage/img/image-blog1.png"  class="image-blog1">
-                    <h1>Lörem ipsum patt kar i renyst</h1>
-                    <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana, nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
-                    <button>Read More</button>
-                </div>
-                <div class="blog">
-                    <img src="storage/img/image-blog2.png">
-                    <h1>Lörem ipsum patt kar i <br>renyst</h1>
-                    <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana, nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
-                    <button>Read More</button>
-                </div>
-                <div class="blog">
-                    <img src="storage/img/image-blog3.png">
-                    <h1>Lörem ipsum patt kar i renyst</h1>
-                    <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana, nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
-                    <button>Read More</button>
-                </div>
-                <div class="blog">
-                    <img src="storage/img/image-blog4.png">
-                    <h1>Lörem ipsum patt kar i renyst</h1>
-                    <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana, nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
-                    <button>Read More</button>
-                </div>
-                <div class="blog">
-                    <img src="storage/img/image-blog5.png">
-                    <h1>Lörem ipsum patt kar i renyst</h1>
-                    <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana, nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
-                    <button>Read More</button>
-                </div>
+            <div class="blog">
+                <img src="storage/img/image-blog3.png">
+                <h1>Lörem ipsum patt kar i renyst</h1>
+                <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana,nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
+                <button>Read More</button>
             </div>
-            <section class="redes">
-                <img src="storage/img/redes.png" alt="redes" class="redes">
-            </section> -->
+            <div class="blog">
+                <img src="storage/img/image-blog4.png">
+                <h1>Lörem ipsum patt kar i renyst</h1>
+                <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana,nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
+                <button>Read More</button>
+            </div>
+            <div class="blog">
+                <img src="storage/img/image-blog5.png">
+                <h1>Lörem ipsum patt kar i renyst</h1>
+                <p>Lörem ipsum patt kar i renyst robotfälla. Tregyktig      sana,nuktigt i mandatpingis tes. Analigt anede. Arat   lagen</p>
+                <button>Read More</button>
+            </div>
+        </section>
+        <section class="info-redes">
+            <img src="storage/img/redes.png">
+        </section>
     </main>
+    <footer>
 
+    </footer>
 </body>
+
 </html>

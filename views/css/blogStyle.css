@@ -1,0 +1,144 @@
+@import url('variables.css');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #071917;
+  }
+
+  .header {
+    /*background: red; 
+    /* padding: 15px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+}
+.div__logo img {
+    background: transparent; 
+    /* padding: 15px; */
+}
+
+.div__menu {
+    background: transparent; 
+    /* padding: 15px; */
+}
+.ul__menu {
+    background: transparent; 
+    /* padding: 15px; */
+    display: flex;
+    gap: 100px;
+    padding-right: 200px;
+    color: var(--font-color-1);
+}
+.ul__menu li{
+    background: transparent; 
+    list-style: none;
+    font-family: "Montserrat-SemiBold";
+    font-size: 18px;
+}
+.ul__menu li a{
+    background: transparent; 
+    color: var(--font-color-1);
+    text-decoration: none;
+}
+.header-vectors{
+    padding: auto;
+    position: absolute;
+    right: 5svw;
+}
+.lineTop img {
+    padding-top: 80px;
+    display: flex;
+    justify-items: center;
+    margin: 0 auto;
+}
+.Latest-Blog-button{
+    width: 113px;
+    height: 28px;
+    list-style: none;
+    text-decoration: none;
+}
+.Latest-Blog-button a{
+    width: 113px;
+    height: 28px;
+    list-style: none;
+    text-decoration: none;
+    background-color: #145e2a;
+    color: var(--font-color-1);
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    top: 5svw;
+    left: 10svh;
+}
+.second__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    list-style: none;
+    gap:25px;
+}
+.second__menu a {
+    font-family: "Montserrat-Light";
+    font-size: 15px;
+    color: var(--font-color-1);
+    text-decoration: none;
+}
+.principal__image {
+    padding-top: 2svw;
+    padding-left: 5.5svw;
+    height: 80svh;
+}
+.top__blog__text {
+    width: 672px;
+    height: 470px;
+    background: #145e2aab;
+    color: var(--font-color-1);
+    padding: 25px;
+    border-radius: 30px;
+    position: absolute;
+    top: 25svh;
+    left: 58svw;
+
+}
+.top__blog__text h3{
+    background: transparent;
+    font-family: "Montserrat-Light";
+    font-size: 28px;
+}
+.top__blog__text h2{
+    background: transparent;
+    font-family: "Montserrat-SemiBold";
+    font-size: 28px;
+    padding-top: 6svw;
+}
+.top__blog__text p{
+    background: transparent;
+    font-family: "Montserrat-Medium";
+    font-size: 25px;
+    padding-top: 1svw;
+}
+.top__blog__text a{
+    width: 197px;
+    height: 35px;
+    background: #d9d9d9;
+    color: var(--color-gradient-2);
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    font-family: "Montserrat-Light";
+    font-size: 24px;
+    padding-top: 5svw;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    left: 35%;
+
+}
